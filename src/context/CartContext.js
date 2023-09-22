@@ -4,7 +4,7 @@ import reducer from "../reducer/CartReducer";
 const CartContext = createContext();
 
 const getLocalCartData = () => {
-  let localCartData = localStorage.getItem("thapaCart");
+  let localCartData = localStorage.getItem("amitCart");
   if (localCartData === null || undefined) {
     return [];
   } else {
@@ -53,7 +53,7 @@ const CartProvider = ({ children }) => {
   useEffect(() => {
     dispatch({ type: "CART_TOTAL_ITEM" });
     dispatch({ type: "CART_TOTAL_PRICE" });
-    localStorage.setItem("thapaCart", JSON.stringify(state.cart));
+    localStorage.setItem("amitCart", JSON.stringify(state.cart));
   }, [state.cart]);
 
   return (
