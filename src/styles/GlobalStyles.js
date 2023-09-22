@@ -1,3 +1,7 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+
 * {
   margin: 0;
   padding: 0;
@@ -44,11 +48,13 @@ h4 {
 }
 
 h1 {
+  color: ${({ theme }) => theme.colors.heading};
   font-size: 6rem;
   font-weight: 900;
 }
 
  h2 {
+   color: ${({ theme }) => theme.colors.heading};
    font-size: 4.4rem;
    font-weight: 300;
    white-space: normal;
@@ -61,6 +67,7 @@ h3 {
 }
 
 p, button {
+  color: ${({ theme }) => theme.colors.text};
   font-size: 1.65rem;
   line-height: 1.5;
   font-weight:400;
@@ -75,9 +82,9 @@ li {
 }
 
 
- /* resuable code section  */
+${"" /* resuable code section  */}
 
-/* .container {
+.container {
   max-width: 120rem;
   margin: 0 auto;
 }
@@ -89,7 +96,6 @@ li {
 
 .grid-two-column {
   grid-template-columns: repeat(2, 1fr);
-
 }
 
 .grid-three-column {
@@ -170,4 +176,4 @@ input, textarea{
         }
     }
 
-`; */
+`;
